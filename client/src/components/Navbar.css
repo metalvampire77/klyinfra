@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 
 * {
@@ -24,6 +26,7 @@ a {
   height: 80px;
   width: 100%;
   display: grid;
+  background-color: #304c89;
   /* justify-content: center; */
   align-items: center;
 }
@@ -60,23 +63,46 @@ a {
 
 .nav-item {
   margin-left: 5rem;
+  padding: 10px;
+  position: relative;
 }
 
 .nav-link {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #475569;
+  /* color: #475569; */
+  color: #fff;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Adjust this value based on your design */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cdc392; /* Color of the line */
+  transition: width 0.3s; /* Adding width transition for smooth effect */
 }
 
 .nav-link:hover {
-  color: #482ff7;
+  color: #cdc392; /* Change the color on hover */
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-logo {
-  font-size: 2.1rem;
+  /* font-size: 2.1rem;
   width: auto;
   font-weight: 500;
-  color: #482ff7;
+  /* color: #482ff7; */
+  /* color: #101010; */
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -99,6 +125,10 @@ a {
 
   .nav-item {
     margin: 2.5rem 0;
+  }
+
+  .nav-link {
+    color: #101010;
   }
 
   .hamburger {

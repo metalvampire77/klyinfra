@@ -16,9 +16,14 @@ function Navbar() {
     <header className="header">
       <nav className={`navbar ${isActive ? "active" : ""}`}>
         <a href="#" className="nav-logo">
-          kly infra
+          <img src={logo} alt="" className="nav-logo" />
         </a>
         <ul className={`nav-menu ${isActive ? "active" : ""}`}>
+          <li className="nav-item">
+            <a href="#" className="nav-link">
+              Home
+            </a>
+          </li>
           <li className="nav-item">
             <a href="#" className="nav-link">
               Services
@@ -26,17 +31,12 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link">
-              Blog
+              Projects
             </a>
           </li>
           <li className="nav-item">
             <a href="#" className="nav-link">
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Contact
+              Contact Us
             </a>
           </li>
         </ul>
